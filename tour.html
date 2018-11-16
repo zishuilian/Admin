@@ -1,0 +1,66 @@
+{% extends 'Admin/adminBase.html' %}
+{% block tabCard%}
+<ul class="breadcrumb">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">综合查询</a>
+        </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="box col-md-12 tour">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-globe"></i> 线路信息汇总</h2>
+
+                   <div class="box-icon">
+                        <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                class="glyphicon glyphicon-cog"></i></a>
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <div>
+                        <div class="mc_embed_signup">
+                <!--form action="//halalit.us3.list-manage.com/subscribe/post?u=444b176aa3c39f656c66381f6&amp;id=eeb0c04e84" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate-->
+                    <form class="form-horizontal" action="blank" method="post">
+                    <div>
+                        <!--label>Keep up with my work</label-->
+
+                        <input type="text" value="" name="线路编号" class="email" placeholder="线路编号" required>
+                        <div><input type="submit" value="查询" name="subscribe" class="button"></div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+                    <div class="alert alert-info">途径站点信息</div>
+                     <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                         <tbody>
+                         <tr>
+                             <td><b><font  size="3" color="#2f4f4f">站点名称</td>
+                            <td><b><font  size="3" color="#2f4f4f">换乘线号</td>
+                         </tr>
+                         </tbody>
+                     </table>
+                    <div class="alert alert-info">班次信息</div>
+                     <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                         <tbody>
+                         <tr>
+                             <td><b><font  size="3" color="#2f4f4f">班次编号</td>
+                            <td><b><font  size="3" color="#2f4f4f">发车时间</td>
+                         </tr>
+                         </tbody>
+                     </table>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+{% endblock %}

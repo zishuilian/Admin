@@ -1,0 +1,141 @@
+  {% extends 'Admin/adminBase.html' %}
+{% block tabCard%}
+<ul class="breadcrumb">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">售票系统</a>
+        </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+   <div class="row">
+    <div class="box col-md-12">
+    <div class="box-inner">
+    <div class="box-header well" data-original-title="">
+        <h2><i class="glyphicon glyphicon-user"></i> 查询条件</h2>
+
+        <div class="box-icon">
+            <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+            <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                    class="glyphicon glyphicon-chevron-up"></i></a>
+            <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+        </div>
+    </div>
+    <div class="box-content">
+        <!--div class="col-md-2 col-lg-3 col-sm-12 col-xs-12 email-subscription-footer"-->
+        <form class="form-horizontal" action="/findshift" method="post">
+        <div>
+            <div class="mc_embed_signup">
+                <!--form action="//halalit.us3.list-manage.com/subscribe/post?u=444b176aa3c39f656c66381f6&amp;id=eeb0c04e84" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate-->
+                    <div>
+                        <!--label>Keep up with my work</label-->
+                        <input type="text" value="" name="起点站" class="email" placeholder="起点站" required>
+                        <input type="text" value="" name="终点站" class="email" placeholder="终点站" required>
+                        <div class="power_field"><input type="text" name="b_444b176aa3c39f656c66381f6_eeb0c04e84" tabindex="-1" value=""></div>
+                        <div class="input-prepend">
+                        <label class="remember" for="remember"><input type="checkbox" id="advance"> 预售查询</label>
+                        </div>
+                        <div><input type="submit" value="查询" name="subscribe" class="button" ></div>
+                    </div>
+
+            </div>
+        </div>
+        </form>
+    <div class="alert alert-info">查询结果</div>
+    <table class="table table-striped table-bordered table-hover bootstrap-datatable datatable responsive">
+    <thead>
+    <tr>
+        <th>班次信息</th>
+        <th>发车时间</th>
+        <th>到达时间</th>
+        <th>车票价格</th>
+        <th>剩余票数</th>
+        <th>订票</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="center">{{ shift }}</td>
+        <td class="center">{{ starttime }}</td>
+        <td class="center">{{ arrivetime }}</td>
+        <td class="center">
+            <span class="label-success label label-default">￥<fare></span><br/>
+            <!--span class="label-info label label-default">二等票 ￥320</span><br/-->
+            <!--span class="label-danger label label-default">三等票 ￥220</span><br/-->
+        </td>
+        <td class="center">
+            <a class="btn btn-success" href="#">
+                一等票 {{ remainvote}}张
+            </a><br/>
+            <!--a class="btn btn-info" href="#">
+                 二等票 250张
+            </a><br/-->
+            <!--a class="btn btn-danger" href="#">
+                 三等票 250张
+            </a><br/-->
+        </td>
+        <td class="center">
+            <a class="btn btn-danger" href="form.html">订票</a><br/>
+        </td>
+    </tr>
+     <tr>
+        <td class="center">DA001</td>
+        <td class="center">07:46</td>
+        <td class="center">12:00</td>
+        <td class="center">
+            <span class="label-success label label-default">一等票 ￥420</span><br/>
+            <!--span class="label-info label label-default">二等票 ￥320</span><br/-->
+            <!--span class="label-danger label label-default">三等票 ￥220</span><br/-->
+        </td>
+        <td class="center">
+            <a class="btn btn-success" href="#">
+                一等票 250张
+            </a><br/>
+            <!--a class="btn btn-info" href="#">
+                 二等票 250张
+            </a><br/-->
+            <!--a class="btn btn-danger" href="#">
+                 三等票 250张
+            </a><br/-->
+        </td>
+        <td class="center">
+            <a class="btn btn-danger" href="form.html">订票</a><br/>
+        </td>
+    </tr>
+    <tr>
+        <td class="center">DA001</td>
+        <td class="center">07:46</td>
+        <td class="center">12:00</td>
+        <td class="center">
+            <span class="label-success label label-default">一等票 ￥420</span><br/>
+            <!--span class="label-info label label-default">二等票 ￥320</span><br/-->
+            <!--span class="label-danger label label-default">三等票 ￥220</span><br/-->
+        </td>
+        <td class="center">
+            <a class="btn btn-success" href="#">
+                一等票 250张
+            </a><br/>
+            <!--a class="btn btn-info" href="#">
+                 二等票 250张
+            </a><br/-->
+            <!--a class="btn btn-danger" href="#">
+                 三等票 250张
+            </a><br/-->
+        </td>
+        <td class="center">
+            <a class="btn btn-danger" href="form.html">订票</a><br/>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    <!--/span-->
+
+    </div><!--/row-->
+{% endblock %}
+
